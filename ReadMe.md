@@ -48,7 +48,13 @@ Both Web API and Client Application will be running and you can browse the clien
 https://localhost:5001/
 
 ## Running the Integration Tests
-To run the integration tests for this application, navigate to `tests\GlossaryBuilder.IntegrationTests` directory from command line and execute following command
+To run the integration tests for this application, navigate to `tests\Application.IntegrationTests` directory from command line and execute following command
+```
+dotnet test
+```
+
+## Running the Unit Tests
+To run the integration tests for this application, navigate to `tests\Application.UnitTests` directory from command line and execute following command
 ```
 dotnet test
 ```
