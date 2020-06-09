@@ -1,0 +1,21 @@
+ <div class="columns mt-2">
+    <div class="column col-12">
+      <h3>Glossary Terms</h3>
+      <div *ngIf="isError" class="alert alert-dismissible alert-warning">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <h4 class="alert-heading">Warning!</h4>
+        <p class="mb-0">Something went wrong with the API. You are viewing sample data</p>
+      </div>
+      <div *ngIf="failedToDelete" class="alert alert-dismissible alert-danger">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <h4 class="alert-heading">Oops!</h4>
+        <p class="mb-0">Something went wrong. Cannot delete term</p>
+      </div>
+      <ngx-table [data]="data" [configuration]="configuration" [columns]="columns"> </ngx-table>
+      <a [routerLink]="['/add-term']" class="btn btn-primary">Add Term</a>
+    </div>
+  </div>
+  <ng-template #actionTpl let-row let-rowIndex="rowIndex">
+    <a class="btn btn-link" (click)="edit(rowIndex)"><i class="fa fa-edit"></i></a>
+    <div class="btn btn-link" (click)="remove(rowIndex)"><i class="fa fa-trash"></i></div>
+  </ng-template>

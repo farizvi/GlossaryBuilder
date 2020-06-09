@@ -1,0 +1,11 @@
+:host ::ng-deep .ngx-table__header-cell > div {
+  text-align: center;
+  display: block;
+}
+::ng-deep tr th:first-child {
+  display: none;
+}
+
+::ng-deep tr td:first-child {
+  display: none;
+}

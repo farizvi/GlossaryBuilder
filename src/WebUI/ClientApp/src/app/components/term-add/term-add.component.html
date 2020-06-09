@@ -1,0 +1,38 @@
+<div class="card m-3">
+  <h5 class="card-header">Add Glossary Term</h5>
+  <div class="card-body">
+    <div *ngIf="isError" class="alert alert-dismissible alert-danger">
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+      <h4 class="alert-heading">Oops!</h4>
+      <p class="mb-0">Something went wrong. Cannot add term</p>
+    </div>
+    <form [formGroup]="addTerm" (ngSubmit)="onSubmit()">
+      <div class="form-row">
+        <div class="form-group col-5">
+          <label>Term</label>
+          <input type="text" formControlName="term" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.term.errors }" />
+          <div *ngIf="submitted && f.term.errors" class="invalid-feedback">
+            <div *ngIf="f.term.errors.required">Term is required</div>
+          </div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-12">
+          <label>Description</label>
+          <textarea formControlName="description" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.term.errors }"></textarea>
+          <div *ngIf="submitted && f.description.errors" class="invalid-feedback">
+            <div *ngIf="f.description.errors.required">Description is required</div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center">
+        <button class="btn btn-primary mr-1">Save</button>
+        <button class="btn btn-secondary" type="reset" (click)="onReset()">Cancel</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="container">
+  <a routerLink="/">Back Home</a>
+</div>
+
