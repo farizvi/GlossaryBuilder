@@ -23,6 +23,7 @@ This is the client application which provides the UI for Glossary Builder.
 This project consists of integration tests for this application. 
 
 ### Application.UnitTests
+This project consists of unit tests for this application.
 
 ## Running the Glossary Builder Application
 This application is developed using .Net Core 3.1 and Angular 9. To run this application
