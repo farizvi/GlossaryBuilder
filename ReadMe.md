@@ -41,8 +41,9 @@ dotnet restore
 npm  install
 ```
 
-- Navigate to `src\WebUI` directory from command line and run following command
+- Navigate to `src\WebUI` directory from command line and run following commands
 ```
+dotnet build
 dotnet run
 ```
 
