@@ -4,23 +4,25 @@ Glossary Builder is a web application which maintains a list of words and their 
 ## Project Overview
 This application consists of following projects
 
-### GlossaryBuilder.Domain
+### Domain
 This project consists of Domain entities for the application.
 
-### GlossaryBuilder.Infrastructure
+### Infrastructure
 This project consists of helper libraries and the database migration logic for the application.
 
-### GlossaryBuilder.Application
+### Application
 This project consists of the actual implementation logic of the application. This project communicates with other layers of the application to perform CRUD operations
 
-### GlossaryBuilder.WebUI
+### WebUI
 This project is the entry point of this application. It consists of the Web API methods which allow the user to perform CRUD operations
 
-#### GlossaryBuilder.WebUI/ClientApp
+#### WebUI/ClientApp
 This is the client application which provides the UI for Glossary Builder.
 
-### GlossaryBuilder.IntegrationTests
-This project consists of integration tests for this application. The tests are run against a separate database to test the underlying logic.
+### Application.IntegrationTests
+This project consists of integration tests for this application. 
+
+### Application.UnitTests
 
 ## Running the Glossary Builder Application
 This application is developed using .Net Core 3.1 and Angular 9. To run this application
@@ -33,12 +35,12 @@ This application is developed using .Net Core 3.1 and Angular 9. To run this app
 dotnet restore
 ```
 
-- For client app, navigate to `src\GlossaryBuilder.WebUI\ClientApp` directory in command line and execute following command
+- For client app, navigate to `src\WebUI\ClientApp` directory in command line and execute following command
 ```
 npm  install
 ```
 
-- Navigate to `src\GlossaryBuilder.WebUI` directory from command line and run following command
+- Navigate to `src\WebUI` directory from command line and run following command
 ```
 dotnet run
 ```
